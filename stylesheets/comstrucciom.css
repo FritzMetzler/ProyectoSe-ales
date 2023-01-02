@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Showcard Gothic';
+    src: url('fonts/SHOWG.TTF');
+
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat.ttf');
+}
+
+*{
+    padding: 0;
+    margin: 0;  
+    box-sizing: border-box;
+
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.text-container{
+    font-family: 'Montserrat';
+}
+.text-container h1{
+    font-family: 'Showcard Gothic';
+}
+
+.link-item a{
+    font-family: 'Showcard Gothic';
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    color: red;
+    background-color: yellow;
+    border-radius: 4px;
+}

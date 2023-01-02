@@ -1,0 +1,915 @@
+@import url(//db.onlinewebfonts.com/c/d66fa62dabed66f2226a1b2d17da0579?family=Showcard+Gothic);
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat.ttf');
+}
+@font-face {font-family: fuente; src: url("//db.onlinewebfonts.com/t/d66fa62dabed66f2226a1b2d17da0579.eot"); src: url("//db.onlinewebfonts.com/t/d66fa62dabed66f2226a1b2d17da0579.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/d66fa62dabed66f2226a1b2d17da0579.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/d66fa62dabed66f2226a1b2d17da0579.woff") format("woff"), url("//db.onlinewebfonts.com/t/d66fa62dabed66f2226a1b2d17da0579.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/d66fa62dabed66f2226a1b2d17da0579.svg#Showcard Gothic") format("svg"); }
+/*! -------------- Global --------------*/
+*{
+  padding: 0;
+  margin: 0;  
+  box-sizing: border-box;
+}
+
+body{
+  display: block;
+}
+h1 , h2 , h3{
+  font-family: fuente;
+}
+p{
+  font-family: 'Montserrat';
+}
+
+/*! -------------- Navbar --------------*/
+
+nav{
+  font-family: fuente;
+  display: flex;
+  align-items: left;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+}
+
+.logo-container{
+  padding-left: 10px;
+  background-color: white;
+}
+
+.logo-container img{
+  max-height: 50px;
+  position: relative;
+}
+
+#img-icon{
+  display: none;
+}
+.nav-content{
+  padding-left: 30px;
+}
+
+.nav-content span{
+padding: 15px;
+}
+
+.nav-content a{
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 4px;
+  transition-duration: 0.3s;
+}
+
+.nav-content a:hover{
+  color: red;
+  background-color: yellow;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: black;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+/*? -- Responsive --*/
+@media (max-width:820px) {
+  nav{
+      display:inline-block;
+      width: 100%;
+  }
+  .checkbtn {
+      display: block;
+      position:absolute;
+      padding-left: 5%;
+      padding-top: -5px;
+  }
+  .logo-container{
+      padding-left: 45%;
+  }
+  
+  #img-complete{
+      display:none;
+      
+  }
+  .logo-container{
+      padding-top: 15px;
+      width: 75px;
+      height: 75px;
+  }
+  .logo-container img{
+      transform: scale(1.5);
+  }
+
+  #img-icon{ 
+      display: block; 
+  }
+  .nav-content{
+      width: 100%;
+      display: none;
+      
+  }
+  .nav-content a{
+      transition-duration: 0.3s;
+      font-size: 20px;
+      gap: 5px;
+  }
+  .nav-content a:hover{
+      color: red;
+      background-color: yellow;
+  }
+
+  #check:checked~.nav-content {
+      display:list-item;            
+  }
+
+
+}
+
+/*! -------------- Banner index--------------*/
+.banner{
+	width: 100%;
+	height: 600px;
+	animation: banner 10s infinite linear alternate;
+	background-size: 100% 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  object-fit: cover;
+}
+@keyframes banner{
+	0%, 20%{
+		background-image: url("https://fondosmil.com/fondo/12406.jpg");
+	}
+	25%, 45%{
+		background-image: url("https://www.todopaisajes.com/Minis/ciudad-de-noche.jpg");
+	}
+	50%, 70%{
+		background-image: url("https://i.pinimg.com/originals/b9/1d/fd/b91dfdd21cf816a69ed544d6800680a4.jpg");
+	}
+	75%, 100%{
+		background-image: url("https://i.pinimg.com/originals/55/5e/52/555e52ca50443a4d366858dc5c83d540.jpg");
+	}
+}
+.capa{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.6);
+}
+.info{
+	z-index: 0;
+	width: 100%;
+	max-width: 550px;
+	text-align: center;
+}
+.info h1{
+	color: #fff;
+	font-size: 45px;
+	margin-bottom: 20px;
+	letter-spacing: 1px;
+}
+.info p{
+	color: #c7c7c7;
+	line-height: 1.7;
+	margin-bottom: 30px;
+}
+.info a{
+	color: #fff;
+	text-decoration: none;
+	background: #3088e0;
+	padding: 16px 37px;
+	display: inline-block;
+	border-radius: 50px;
+}
+
+/*! -------------- Novedades --------------*/
+.novedades{
+  display: block;
+  justify-content: center;
+}
+
+.nov-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.nov-tittle{
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.nov-tittle h1{
+  font-family: fuente;
+  font-size: 30px;
+}
+
+.nov-card{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.nov-card img{
+  justify-content: center;
+  max-width: 350px;
+  border-radius: 50px;
+}
+@media (max-width:920px) {
+  .nov-card{
+    padding-left: 14px;
+  padding-right: 14px;
+  }
+  .nov-card img{
+    justify-content: center;
+    max-width: 240px;
+    border-radius: 50px;
+  }
+  
+}
+@media (max-width:820px) {
+  .nov-container{
+      display: block;
+  }
+  .nov-card{
+      display: flex;
+      padding-left: 0px;
+      transform: scale(0.7);
+      justify-content: center;
+      align-items: center;
+  }
+
+  .nov-card img{
+      border-radius: 50px;
+      max-width: 475px;
+  }
+}
+
+/*! ------------------ Appstore and Playstore --------------------*/
+.App-store{
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: yellow;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.app-text{
+  display: flexbox;
+  padding-left: 15px;
+  padding-right: 15px;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat';
+
+}
+
+.app-text h1{
+  font-family: fuente;
+  color: red;
+  font-size: 48pt;
+  text-align: center;
+}
+
+.app-text p{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  
+  font-size: 25px;
+  text-align: center;
+  color: red;
+
+}
+
+.app-qr{
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.app-qr span{
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: all 0.3s;
+
+}
+
+.app-qr a{
+  font-size: 30px;
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: red;
+  background-color: none;
+  border: 1px solid red;
+  border-radius: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.app-image{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.app-image img{
+  max-width: 450px;
+}
+
+.app-qr span:hover{
+  transform: scale(1.1);
+}
+
+.app-qr a:hover{
+  color: yellow;
+  background-color: red;
+}
+@media (max-width:920px) {
+  .App-store{
+    padding-top:10%;
+    display: block;
+    height: 100%;
+  }
+  .app-image{
+    padding-top: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.app-image img{
+    max-width: 35vh;
+}
+
+}
+@media (max-width:820px) {
+  .App-store{
+      padding-top:10%;
+      display: block;
+      height: 100%;
+  }
+
+  .app-text h1 {
+      font-size: 35pt;
+  }
+  
+  .app-text p{
+      font-size: 15pt;
+  }
+  
+  .app-qr a{
+      font-size: 15px;
+  }
+  
+  
+}
+
+@media (max-width:600px) {
+  .App-store{
+    height: 100%;
+  }
+
+}
+
+/*! ------------ Promociones ------------ */
+.promociones{
+  /*display: flex;*/
+  justify-content: center;
+  align-items: center;
+}
+.promociones h3{
+  font-family: fuente;
+  font-weight: lighter;
+}
+.promociones p{
+  font-family: 'Montserrat';
+}
+
+.promo-container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.prom-list{
+  width: 35%;
+  display: block;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.prom-list a{
+  text-decoration: none;
+  color: black;
+}
+
+.prom-card-container{
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.prom-card{
+  display: flex;
+  padding: 20px 20px 20px 20px;
+  background-color: #efc092;
+  border-radius: 30px;
+  width: 500px;
+}
+
+.prom-card-text{
+  width: 50%;
+}
+
+.prom-card-text h3{
+  font-size: 25px;
+}
+
+.prom-card-active{
+  border-style: solid;
+  border-color: red;
+}
+.prom-img-container{
+  width: 50%;
+  display: flex;
+  justify-content: right;
+}
+.prom-card-image{
+  height: 100px;
+}
+
+.prom-card-image{
+  border-radius: 20px;
+}
+
+.prom-visualizer{
+  width: 60%;
+  /*background-color: red;*/
+  display: grid;
+  overflow: hidden;
+  max-height: 100%;
+}
+
+.prom-visual-container{
+  margin:auto;
+  text-align: center;
+  /*background-color: aqua;*/
+}
+
+.big-image{
+  max-height: 250px;
+  border-radius: 20px;
+}
+
+.prom-visual-text-container{
+  padding: 15px 12vh 0 12vh;
+  /*background-color: blueviolet;*/
+}
+.prom-visual-text-container h3{
+  font-size: 32px;
+  padding-bottom: 15px;
+}
+
+.prom-visual-text-container p{
+  font-size: 20px;
+}
+/*? Servicios para llevar*/
+.delivery {
+  display: flex;
+  justify-content: center;
+}
+
+.del-container{
+  display: block;
+  background-color: yellow;
+  text-align: center;
+  padding:10px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+.del-container h3{
+  padding: 7px;
+}
+
+/*
+.global-services{
+  background-color: aqua;
+}
+*/
+
+.global-services ul{
+  display:flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.global-services li{
+  padding: 5px 10px;
+}
+
+.delivery img{
+  width:100px;
+}
+
+.delivery img{
+  transition-duration: 0.3s;
+}
+
+.delivery img:hover{
+  transform: scale(1.1);
+}
+
+@media (max-width:1100px) { /*Resposive tabletas*/
+  .promo-container{
+  width: 100%;
+  height: 100%;
+  display: block;
+  }
+
+  .prom-list{
+    width: 100%;
+    display: flex;
+    overflow: auto;
+  }
+
+  .prom-card-container{
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+  }
+  .prom-card{
+    width: 600px;
+  }
+  .prom-visualizer{
+    padding-top: 30px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .big-image{
+    padding-top: 10px;
+  }
+  .prom-visual-text-container{
+    padding-bottom: 15px;
+  }
+
+}
+
+@media(max-width:600px) {
+  .promo-container{
+    height: 100%;
+  }
+  .prom-list{
+    height: 150px;
+    overflow-y: hidden;
+  }
+  .prom-card-container{
+    width: 350px;
+    height: 150px;
+    padding: 0 15px 0 15px;
+    text-align: center;
+  }
+
+  .prom-card-image{
+    height: 100px;
+  }
+  .prom-visualizer{
+    overflow-y: scroll;
+  }
+  .prom-visual-container{
+    padding-top: 10px;
+  }
+  .big-image{
+    width: 400px;
+  }
+  .delivery{
+    width: 100%;
+  }
+  .del-container{
+    width: 300px;
+  } 
+  .del-container h3{
+    padding-top: 15px;
+  }
+  .del-container img{
+    padding-top: 10px;
+    width: 75px;
+  }
+
+}
+
+@media(max-width:450px) {
+  .big-image{
+    width: 350px;
+  }
+  .prom-card{
+    display: block;
+  }
+  .prom-card-text {
+    width: 100%;
+    height: 35px;
+    
+  }
+  .prom-card-text p{
+    visibility: hidden;
+  }
+  .prom-img-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+  }
+  .prom-card-image{ 
+    height: 80px;
+  }
+  .prom-visual-container{
+    width: 100%;
+  }
+  .prom-visual-container h3{
+    font-size: 23px;
+  }
+}
+
+
+
+/*! --------------- Paquetes ---------------*/
+.paquetes{
+  display: flex;
+  justify-content: center;
+  /*background-color: red ;*/
+}
+
+.paquetes h3{
+  font-family: fuente;
+  font-weight: lighter;
+  font-size: 40px;
+  padding: 10px;
+}
+
+.paquetes p{
+  padding-bottom: 5px;
+}
+/*? Cartas de los paquetes*/
+.pkg-amazing-cards{
+  padding-top: 15px;
+  width: 80%;
+  display: grid;
+  gap: 2rem;
+  grid-auto-rows: 16rem;
+  grid-template-columns: repeat(auto-fit,minmax(13rem,1fr));
+}
+
+.pkg-amazing-cards h3{
+  font-size: 20px;
+}
+
+.pkg-card-container{
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  border-radius: 30px;
+  background-color: #efc092;
+}
+
+.pkg-card-container h3{
+  text-align: center;
+}
+
+.pkg-card img{
+  max-width: 200px;
+  border-radius: 20px;
+}
+
+.pkg-card-container {
+  transition-duration: 0.3s;
+}
+
+.pkg-card-container:hover{
+  transform: scale(1.1);
+  background-color: #ee9c49;
+}
+
+.pkg-card button{
+  padding: 5px;
+}
+@media (max-width:1200px) {
+  .pkg-amazing-cards h3{
+    font-size: 15px;
+  }
+  .pkg-card img{
+    max-width: 200px;
+    border-radius: 20px;
+  }
+  
+}
+@media (max-width:450px) {
+  .pkg-amazing-cards{
+    grid-template-columns: repeat(auto-fit,minmax(11rem,1fr));
+  }
+}
+/*! ----------- login ------------*/
+
+.log-card-container{
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.log-card-container h1{
+  font-family: fuente;
+  font-weight: lighter;
+}
+.spacer{
+  padding: 30px;
+  text-align: center;
+}
+
+.log-card-container p{
+  font-family: 'Montserrat';
+  font-weight: normal;
+}
+
+.log-data-container{
+  display: flex;
+  padding: 20px;
+  width: fit-content;
+  background-color: yellow;
+  border-radius: 30px;
+  box-shadow: 10px 10px 5px lightblue;
+}
+.log-data-container h1{
+  text-align: center;
+}
+.log-data-container p{
+  padding-top: 7px;
+  padding-bottom: 3px;
+}
+
+.log-data-container input[type="text"], input[type="password"]{
+  border: none;
+  border-bottom: 2px solid red;
+  height: 25px;
+  width:100%;
+  opacity: 0.4;
+  outline:none;
+}
+
+.log-boton{
+  padding-top: 5px;
+  display: flex;
+  justify-content: right;
+}
+
+.log-boton input[type="submit"]{
+  padding: 5px 8px 5px 8px;
+  font-family: fuente;
+  transition: 0.3s;
+  border: none;
+  border-radius: 5px;
+}
+.log-boton input[type="submit"]:hover{
+  color: yellow;
+  background-color: red;
+}
+
+@media (max-width:550px) {
+  .log-card-container{
+    display: block;
+  }
+  .log-space-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+}
+/*!---------------home--------------*/
+.home-carrito-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 10px 0;
+  /*background-color: red;*/
+}
+
+.home-space-container{
+  display: block;
+  overflow-x: scroll;
+  max-height: 300px;
+}
+.home-carrito-container table{
+  min-width: 600px;
+  
+}
+
+.home-space-container th,td{
+  padding:0 15px 0 15px;
+  border-bottom: 1px solid black;
+}
+
+
+.home-space-container p{
+  font-weight: bold;
+}
+
+.order-height-container{
+  height: 100px;
+  overflow-y: scroll;
+}
+.location-to-post{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width:600px) {
+  .home-space-container th, td{
+    padding:0 5px 0 5px;
+  }
+}
+/*!----------- Footer -------------*/
+footer{
+  background-color: yellow;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.footer-content{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0 15px 0;
+  align-items: center;
+}
+.footer-information{
+  max-width: 400px;
+  min-width: 150px;
+  padding: 5px;
+}
+#social a{
+  padding: 5px;  
+  text-decoration: none;
+  color:red;
+  transition:1s ;
+}
+#social p:hover{
+  transform: scale(1.2);
+}
+#logout{
+  padding-bottom: 15px;
+}
+@media (max-width:700px) {
+  .footer-content{
+    display:block;
+    width: fit-content;
+    text-align: center    
+  }
+
+  #warning h1{
+    text-align: center;
+  }
+  #warning p{
+    text-align: justify;
+  }
+
+}
+
+.nombres{
+  position: fixed;
+  z-index: 2;
+  top: 60px;
+  padding: 5px;
+  background-color: yellow;
+
+}
