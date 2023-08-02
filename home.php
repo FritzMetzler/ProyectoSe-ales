@@ -9,7 +9,7 @@ include "controllers/database_conection.php";
 date_default_timezone_set('America/Monterrey');
 ?>
 <h1>Carrito de compra</h1>
-<p>Bienbenido <?php echo $_SESSION['user']; ?> </p>
+<p>Bienvenido <?php echo $_SESSION['user']; ?> ! </p>
 <div class="home-carrito-container">
     <div class="home-space-container">
         <table>

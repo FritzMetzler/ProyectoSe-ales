@@ -4,14 +4,13 @@
         <div class="promo-container">
             <div class="prom-list">    
                 
-                <div class="prom-card-container">
+                <div class="prom-card-container" style="display: none ">
                         <div class="prom-card prom-card-active">
                             <div class="prom-card-text">
                                 <h3>Promotion 1</h3>
-                                <p>1Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                                Temporibus consequatur, ullam repellendus culpa pariatur ut.</p>
+                                <p>Precio: 90</p>
                             </div>
-                            <img src="images/test.png" class="prom-card-image">
+                            <img src="images/imagen1.png" class="prom-card-image">
                         </div>    
                     </div>
                     <?php
@@ -40,11 +39,10 @@
             
             <div class="prom-visualizer">
                 <div class="prom-visual-container">
-                    <img src="images/test.png" class="big-image">
+                    <img src="images/imagen1.png" class="big-image">
                     <div class="prom-visual-text-container">
                         <h3>Promotion 1</h3>
-                        <p>1Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Repudiandae temporibus accusamus, dolore eius ad nisi.</p>
+                        <p>Precio: 90</p>
                     </div>
                 </div>
                 <div class="delivery">
